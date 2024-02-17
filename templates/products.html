@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+
+
+<div class="flex x p-10">
+
+<div class="w-2/12">
+    <h2 class="text-2xl font-bold mb-4">Categories</h2>
+    <ul class=' '>
+        {% for category in categories %}
+      <li class='hover:bg-gray-200 rounded-md py-2 px-3'><a href="#">{{category.category_name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Products on the right -->
+  <div class=' mx-5 w-[2px] bg-black'></div>
+  <div class="w-10/12 ">
+    
+    <h2 class="text-2xl font-bold mb-4">Books</h2>
+    
+    <div class="grid grid-cols-4 gap-4">
+     {% for product in products %}
+      <div class="border p-4 rounded mb-4">
+        <img src="https://m.media-amazon.com/images/I/51u8ZRDCVoL.jpg" class="w-full">
+        <h3 class="text-lg font-bold">{{ product.product_name}}</h3>
+        {% comment %} <p>{{ product.product_desription}}</p> {% endcomment %}
+        <p class="text-gray-700">{{ product.price}}<span> Rs</span></p>
+      </div>
+      {% endfor %}
+      
+    </div>
+
+  </div> 
+
+</div>
+
+{% endblock %}
+
+
+{% comment %} <div class="border p-4 rounded mb-4">
+        <img src="https://m.media-amazon.com/images/I/51u8ZRDCVoL.jpg" class="w-full">
+        <h3 class="text-lg font-bold">To Kill a Mockingbird</h3>
+        <p>A Pulitzer-prize winning novel by Harper Lee</p>
+        <p class="text-gray-700">$9.99</p>
+      </div>
+      <div class="border p-4 rounded mb-4">
+        <img src="https://m.media-amazon.com/images/I/51u8ZRDCVoL.jpg" class="w-full">
+        <h3 class="text-lg font-bold">The Great Gatsby</h3>
+        <p>A classic American novel by F. Scott Fitzgerald</p>
+        <p class="text-gray-700">$12.99</p>
+      </div>
+
+      <div class="border p-4 rounded mb-4">
+        <img src="https://m.media-amazon.com/images/I/51u8ZRDCVoL.jpg" class="w-full">
+        <h3 class="text-lg font-bold">To Kill a Mockingbird</h3>
+        <p>A Pulitzer-prize winning novel by Harper Lee</p>
+        <p class="text-gray-700">$9.99</p>
+      </div>
+      <div class="border p-4 rounded mb-4">
+        <img src="https://m.media-amazon.com/images/I/51u8ZRDCVoL.jpg" class="w-full">
+        <h3 class="text-lg font-bold">The Great Gatsby</h3>
+        <p>A classic American novel by F. Scott Fitzgerald</p>
+        <p class="text-gray-700">$12.99</p>
+      </div>
+
+      <div class="border p-4 rounded mb-4">
+        <img src="https://m.media-amazon.com/images/I/51u8ZRDCVoL.jpg" class="w-full">
+        <h3 class="text-lg font-bold">To Kill a Mockingbird</h3>
+        <p>A Pulitzer-prize winning novel by Harper Lee</p>
+        <p class="text-gray-700">$9.99</p>
+      </div>
+      <div class="border p-4 rounded mb-4">
+        <img src="https://m.media-amazon.com/images/I/51u8ZRDCVoL.jpg" class="w-full">
+        <h3 class="text-lg font-bold">The Great Gatsby</h3>
+        <p>A classic American novel by F. Scott Fitzgerald</p>
+        <p class="text-gray-700">$12.99</p>
+      </div>
+
+      <div class="border p-4 rounded mb-4">
+        <img src="https://m.media-amazon.com/images/I/51u8ZRDCVoL.jpg" class="w-full">
+        <h3 class="text-lg font-bold">To Kill a Mockingbird</h3>
+        <p>A Pulitzer-prize winning novel by Harper Lee</p>
+        <p class="text-gray-700">$9.99</p>
+      </div> {% endcomment %}

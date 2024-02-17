@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class='bg-white' >
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow w-full">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div>
+                    <a href="/" class="flex items-center py-5 px-2">
+                        <h1 class='font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600'>BookStore.</h1>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="/" class="py-5 px-3 text-lg font-semibold text-gray-500 hover:text-blue-500 transition duration-300">Home</a>
+                    <a href="/about" class="py-5 px-3 text-lg font-semibold text-gray-500 hover:text-blue-500 transition duration-30 ">About</a>
+                    <a href="/accounts/login" class="py-5 px-3 text-lg font-semibold text-gray-500 hover:text-blue-500 transition duration-300">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div>
+        
+        {% block content %}{% endblock %}
+        {% comment %} <div class="bg-gray-100 h-[600px] flex flex-col justify-center items-center">
+
+        <!-- About Section -->
+        <div class="container p-8 bg-white shadow-lg rounded-lg mx-auto my-auto">
+            <h1 class="text-4xl font-bold mb-6">About BookStore</h1>
+            <p class="mb-4">Welcome to Textbooks Hub, your go-to marketplace for buying and selling college textbooks. At BookStore, our mission is to make textbook transactions hassle-free for students like you.</p>
+            <p class="mb-4">Whether you need to find the textbooks required for your courses or want to sell your old books for top dollar, we've got you covered. Join our campus bookstore and marketplace to enjoy a seamless experience in acquiring and parting with textbooks.</p>
+            <p class="mb-4">Browse our collection of books, discover great deals, and be a part of the BookStore community. We strive to create a platform that simplifies the textbook exchange process, making education more accessible for everyone.</p>
+        </div>
+
+    </div> {% endcomment %}
+</div>
+    
+    <!-- Footer -->
+    <footer class="bg-white py-6 mt-12 w-full">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href='/' class='font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600'>BookStore.</a>
+                </div>
+                <div class="flex space-x-6 items-center">
+                    <a href="#" class="text-black hover:text-blue-500 transition">About</a>
+                    <a href="#" class="text-black hover:text-blue-500 transition">Contact</a>
+                    <a href="#" class="text-black hover:text-blue-500 transition">Terms</a>
+                    <a href="#" class="text-gray-300 hover:text-blue-400">
+                        <!-- Twitter icon -->
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-blue-400">
+                        <!-- Twitter icon -->
+                    </a>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-700">
+            <div class="text-center text-black text-sm">
+                © BookStore 2023. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

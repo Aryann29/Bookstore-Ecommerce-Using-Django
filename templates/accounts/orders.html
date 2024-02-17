@@ -1,0 +1,54 @@
+{% extends 'basemain.html' %}
+
+{% block title %}BookStore - Orders{% endblock %}
+
+{% block content %}
+    <!-- Orders Page -->
+    <div class=" h-screen mx-auto  p-10">
+        <h1 class="text-3xl font-bold mb-6">Your Orders</h1>
+
+        <!-- Order List -->
+        <ul class="space-y-8 mx-auto w-2/3">
+
+            <!-- Order Item 1 -->
+            <li class="flex flex-col justify-between bg-white  rounded-md shadow-md mb-4 space-y-3">
+                <div class='flex justify-between bg-gray-200 text-gray-600 p-2 rounded-t-md'>
+                    <div class='flex gap-6'>
+                        <h1 class='flex flex-col'>Order Placed <span>24 January 2024</span></h1>
+                        <p class="text-gray-600 flex flex-col">Total <span>$19.99</span></p>
+                    </div>
+                    <p class="text-gray-500">Order #<span>787-343</span></p>
+                </div>
+                <div class='flex justify-between p-4'>
+                    <div class='flex gap-5'>
+                        <img src="https://m.media-amazon.com/images/I/51u8ZRDCVoL.jpg" alt="Product 1" class="w-24 h-36 object-fit">
+                        <h2 class="text-2xl font-semibold">The Great Gatsby</h2>
+                    </div>
+                    <p class="self-center mb-4 mr-4 text-gray-500"><span class=' text-xl font-bold text-green-400'>Deliverd</span></p>
+                </div>
+            </li>
+
+            <!-- Order Item 2 -->
+            <li class="flex flex-col justify-between bg-white  rounded-md shadow-md mb-4 space-y-3">
+                <div class='flex justify-between bg-gray-200 text-gray-600 p-2 rounded-t-md'>
+                    <div class='flex gap-6'>
+                        <h1 class='flex flex-col'>Order Placed <span>24 January 2024</span></h1>
+                        <p class="text-gray-600 flex flex-col">Total <span>$19.99</span></p>
+                    </div>
+                    <p class="text-gray-500">Order #<span>787-343</span></p>
+                </div>
+                <div class='flex justify-between p-4'>
+                    <div class='flex gap-5'>
+                        <img src="https://m.media-amazon.com/images/I/51u8ZRDCVoL.jpg" alt="Product 1" class="w-24 h-36 object-fit">
+                        <h2 class="text-2xl font-semibold">The Great Gatsby</h2>
+                    </div>
+                    <p class="self-center mb-4 mr-4 text-gray-500"><span class=' text-xl font-bold text-red-400'>In Transit</span></p>
+                </div>
+            </li>
+
+            <!-- Add more order items as needed -->
+
+        </ul>
+    </div>
+{% endblock %}
+

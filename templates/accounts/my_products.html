@@ -1,0 +1,41 @@
+{% extends 'basemain.html' %}
+
+{% block title %}BookStore - My Products{% endblock %}
+
+{% block content %}
+    <div class=" mx-auto p-10">
+        <h1 class="text-3xl font-bold mb-6">Your Products</h1>
+
+        <!-- Product List -->
+        <ul class="space-y-8 mx-auto w-2/3">
+            {% for product in products %}
+                <li class="flex flex-col justify-between bg-white rounded-md shadow-md mb-4 space-y-3">
+                    <!-- Display product information -->
+                    <div class='flex justify-between bg-gray-200 text-gray-600 p-2 rounded-t-md'>
+                        <div class='flex gap-6'>
+                            <h1 class='flex flex-col'>Added on <span>{{ product.created_at|date:"Y-m-d" }}</span></h1>
+                            <p class="text-gray-600 flex flex-col">Price <span>${{ product.price }}</span></p>
+                        </div>
+                        <p class="text-gray-500">Product ID #<span>{{ product.uid }}</span></p>
+                    </div>
+                    <div class='flex justify-between p-4'>
+                        <div class='flex gap-5'>
+                            <!-- Add more product information here -->
+                            {% if product.product_images %}
+                                <img src="{{ product.product_images.url }}" alt="{{ product.product_name }} Image" class="w-32 h-32 object-cover">
+                            {% else %}
+                                <p>No image available</p>
+                            {% endif %}
+                            <h2 class="text-2xl font-semibold">{{ product.product_name }}</h2>
+                            <p>{{ product.product_description }}</p>
+                            
+                            <!-- Display the product image -->
+                            
+                        </div>
+                        <!-- Add more actions if needed -->
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
